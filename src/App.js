@@ -6,7 +6,7 @@ class App extends React.Component {
 
   componentDidMount = async () => {
     let res = await fetch(
-      "http://worldtimeapi.org/api/timezone/Europe/Vienna"
+      "https://worldtimeapi.org/api/timezone/Europe/Vienna"
     ).then((res) => {
       return res.json();
     });
@@ -30,7 +30,7 @@ class App extends React.Component {
         offset = 0;
 
         res = await fetch(
-          "http://worldtimeapi.org/api/timezone/Europe/Vienna"
+          "https://worldtimeapi.org/api/timezone/Europe/Vienna"
         ).then((res) => {
           return res.json();
         });
