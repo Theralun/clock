@@ -21,10 +21,10 @@ class App extends React.Component {
 
     let offset = 0;
     let time = res.unixtime * 1000;
-    let tickspeed = 100;
+    let tickspeed = 0;
 
     setInterval(async () => {
-      offset += tickspeed * 1.01;
+      offset += tickspeed * 1.0;
 
       if (offset > 30000) {
         offset = 0;
@@ -38,7 +38,7 @@ class App extends React.Component {
         time = res.unixtime * 1000;
       }
 
-      let day = new Date(time + offset);
+      let day = new Date();
       let hh = day.getHours();
       let mm = day.getMinutes();
       let ss = day.getSeconds();
